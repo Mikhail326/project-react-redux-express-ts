@@ -36,7 +36,7 @@ const login = async (req, res) => {
         .json({ message: "Неверно введен логин или пароль!" });
     }
   } catch {
-    res.status(400).json({ message: "Что-то пошло не так!" });
+    res.status(500).json({ message: "Что-то пошло не так!" });
   }
 };
 
@@ -57,7 +57,7 @@ const register = async (req, res) => {
 
   if (registeredUser) {
     return res
-      .status(400)
+      .status(500)
       .json({ message: "Пользователь, с таким email уже существует!" });
   }
 
@@ -88,7 +88,7 @@ const register = async (req, res) => {
   }
   } catch {
     return res
-      .status(400)
+      .status(500)
       .json({ message: "Что-то пошло не так!" });
   }
 };
