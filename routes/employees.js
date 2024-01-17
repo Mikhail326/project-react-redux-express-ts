@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const { auth } = require("../middleware/auth");
-const { all, add } = require("../controllers/employees");
+const { all, add, employee, edit, remove } = require("../controllers/employees");
 
 /* api/employees/ */
 router.get("/", auth, all);
@@ -9,13 +9,13 @@ router.get("/", auth, all);
 /* api/employees/add */
 router.post("/add", auth, add);
 
-// /* api/employees/:id */
-// router.get("/:id", single);
+/* api/employees/:id */
+router.get("/:id",auth,  employee);
 
-// /* api/employees/edit */
-// router.put("/edit/:id", edit);
+/* api/employees/edit/:id */
+router.put("/edit/:id",auth, edit);
 
-// /* api/employees/remove/:id */
-// router.delete("/remove/:id", remove);
+/* api/employees/remove/:id */
+router.delete("/remove/:id", auth, remove);
 
 module.exports = router;
