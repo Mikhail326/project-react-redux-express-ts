@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "frontend": "npm start --prefix frontend",
     "server": "nodemon ./bin/www",
-    "dev": "concurrently \"npm run server\" \"npm run frontend\"" 
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
   "dependencies": {
     "@prisma/client": "^5.8.0",
