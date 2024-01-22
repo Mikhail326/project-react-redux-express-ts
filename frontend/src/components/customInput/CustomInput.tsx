@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {
     name?: string;
-    type: string;
+    type?: string;
     placeholder?: string;
 };
 
