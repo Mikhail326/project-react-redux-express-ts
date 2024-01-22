@@ -1,7 +1,7 @@
 export const Paths = {
   home: '/',
-  login: 'login',
-  register: 'register',
+  login: '/login',
+  register: '/register',
   status: '/status',
   employee: '/employee',
   employeeAdd: '/employee/add',
